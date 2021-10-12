@@ -1,0 +1,19 @@
+
+<script>
+var order={
+salesDate :"May 5, 2016"
+product: {
+    type: "laptop",
+    price: 500.00,
+    brand: "Acer"
+},
+customer: {
+    name: "Sue Smith"
+    address: "123 Somewhere St",
+    city: "Calgary"
+
+}
+};
+altert(order.salesDate);
+altert(order.product.type);
+altert(order.customer.name);

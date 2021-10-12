@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>Assignment-1 Question-1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <script>
+        var books = [
+
+            [
+                [new OutputBooks("Data Structure and Algorithm Analysis in C++", "Pearson")],
+                [new OutputAuthors("Mark", "Weiss")]
+            ],
+            [
+                [new OutputBooks("Foundations of Finance", "Pearson")],
+                [new OutputAuthors("Arthur", "Keown"), new OutputAuthors("John", "Martin")]
+            ],
+            [
+                [new OutputBooks("Literature for Composition", "Longman")],
+                [new OutputAuthors("Sylvan", "Barnet"),
+                 new OutputAuthors("William", "Cain"), new OutputAuthors("William", "Burto")
+                ]
+            ]
+
+        ];
+
+
+
+        function OutputBooks(title, publisher) {
+            this.title = title;
+            this.publisher = publisher;
+        }
+
+        function OutputAuthors(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        document.write("<div class='square'>");
+
+        for (i = 0; i < books.length; i++) {
+
+            document.write("<h1>" + books[i][0][0].title + "</h1>");
+            document.write("<h3>" + books[i][0][0].publisher + "</h3>");
+
+            for (j = 0; j < books[i][1].length; j++) {
+
+                document.write("Author's Name: " + books[i][1][j].firstName + " " + books[i][1][j].lastName);
+                document.write("<br>");
+            }
+        }
+        document.write("</div>");
+    </script>
+
+
+
+
+</body>
+
+</html>
